@@ -1,7 +1,6 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  output: "standalone",
   outputFileTracingIncludes: {
     "/*": ["./registry/**/*"],
   },
@@ -14,6 +13,11 @@ const nextConfig: NextConfig = {
       {
         protocol: "https",
         hostname: "images.unsplash.com",
+      },
+      {
+        protocol: "https",
+        hostname: "static.z.computer",
+        pathname: "/**",
       },
     ],
   },
